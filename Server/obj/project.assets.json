@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Benjamin_stuff\\C#\\Project_LapTrinhMang\\ProjectLapTrinhMang\\Server.csproj",
+      "projectUniqueName": "D:\\Benjamin_stuff\\C#\\Project_LapTrinhMang\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "D:\\Benjamin_stuff\\C#\\Project_LapTrinhMang\\ProjectLapTrinhMang\\Server.csproj",
+      "projectPath": "D:\\Benjamin_stuff\\C#\\Project_LapTrinhMang\\Server\\Server.csproj",
       "packagesPath": "C:\\Users\\THANH DUY\\.nuget\\packages\\",
-      "outputPath": "D:\\Benjamin_stuff\\C#\\Project_LapTrinhMang\\ProjectLapTrinhMang\\obj\\",
+      "outputPath": "D:\\Benjamin_stuff\\C#\\Project_LapTrinhMang\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\THANH DUY\\AppData\\Roaming\\NuGet\\NuGet.Config",
