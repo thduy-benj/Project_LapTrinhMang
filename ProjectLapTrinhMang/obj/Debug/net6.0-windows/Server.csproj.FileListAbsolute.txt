@@ -1,0 +1,17 @@
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\bin\Debug\net6.0-windows\Server.exe
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\bin\Debug\net6.0-windows\Server.deps.json
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\bin\Debug\net6.0-windows\Server.runtimeconfig.json
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\bin\Debug\net6.0-windows\Server.dll
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\bin\Debug\net6.0-windows\Server.pdb
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\obj\Debug\net6.0-windows\Server.csproj.GenerateResource.cache
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\obj\Debug\net6.0-windows\Server.GeneratedMSBuildEditorConfig.editorconfig
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\obj\Debug\net6.0-windows\Server.AssemblyInfoInputs.cache
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\obj\Debug\net6.0-windows\Server.AssemblyInfo.cs
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\obj\Debug\net6.0-windows\Server.csproj.CoreCompileInputs.cache
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\obj\Debug\net6.0-windows\Server.dll
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\obj\Debug\net6.0-windows\refint\Server.dll
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\obj\Debug\net6.0-windows\Server.pdb
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\obj\Debug\net6.0-windows\Server.genruntimeconfig.cache
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\obj\Debug\net6.0-windows\ref\Server.dll
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\obj\Debug\net6.0-windows\Server.ServerChatForm.resources
+D:\Benjamin_stuff\C#\Project_LapTrinhMang\ProjectLapTrinhMang\obj\Debug\net6.0-windows\Server.ServerSendFileForm.resources
