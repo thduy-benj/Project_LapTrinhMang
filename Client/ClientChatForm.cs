@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,15 +18,25 @@ namespace Client
             InitializeComponent();
         }
 
+        public IPAddress getHost()
+        {
+            return IPAddress.Parse(tbHost.Text);
+        }
+
+        public int getPort()
+        {
+            return int.Parse(tbPort.Text);
+        }
+
         private void btnSendFile_Click(object sender, EventArgs e)
         {
             ClientSendFileForm clientSendFileForm = new ClientSendFileForm();
-            clientSendFileForm.Show();
+            clientSendFileForm.ShowDialog();
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
         {
-            btnSendFile.Enabled = true;
+
         }
     }
 }

@@ -34,9 +34,6 @@
             btnStartServer = new ToolStripMenuItem();
             btnStopServer = new ToolStripMenuItem();
             toolStripSeparator1 = new ToolStripSeparator();
-            toolStripLabel1 = new ToolStripLabel();
-            txtCntHost = new ToolStripTextBox();
-            txtCntPort = new ToolStripTextBox();
             btnConnect = new ToolStripButton();
             btnClear = new ToolStripButton();
             toolStripSplitButton2 = new ToolStripSplitButton();
@@ -65,7 +62,7 @@
             // toolStrip1
             // 
             toolStrip1.ImageScalingSize = new Size(20, 20);
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripSplitButton1, toolStripSeparator1, toolStripLabel1, txtCntHost, txtCntPort, btnConnect, btnClear, toolStripSplitButton2, toolStripSeparator2 });
+            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripSplitButton1, toolStripSeparator1, btnConnect, btnClear, toolStripSplitButton2, toolStripSeparator2 });
             toolStrip1.Location = new Point(0, 0);
             toolStrip1.Name = "toolStrip1";
             toolStrip1.Size = new Size(608, 27);
@@ -84,40 +81,22 @@
             // btnStartServer
             // 
             btnStartServer.Name = "btnStartServer";
-            btnStartServer.Size = new Size(224, 26);
+            btnStartServer.Size = new Size(123, 26);
             btnStartServer.Text = "Start";
+            btnStartServer.Click += btnStartServer_Click;
             // 
             // btnStopServer
             // 
+            btnStopServer.Enabled = false;
             btnStopServer.Name = "btnStopServer";
-            btnStopServer.Size = new Size(224, 26);
+            btnStopServer.Size = new Size(123, 26);
             btnStopServer.Text = "Stop";
+            btnStopServer.Click += btnStopServer_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
             toolStripSeparator1.Size = new Size(6, 27);
-            // 
-            // toolStripLabel1
-            // 
-            toolStripLabel1.Name = "toolStripLabel1";
-            toolStripLabel1.Size = new Size(43, 24);
-            toolStripLabel1.Text = "Host:";
-            // 
-            // txtCntHost
-            // 
-            txtCntHost.BorderStyle = BorderStyle.FixedSingle;
-            txtCntHost.Name = "txtCntHost";
-            txtCntHost.Size = new Size(133, 27);
-            txtCntHost.Text = "localhost";
-            // 
-            // txtCntPort
-            // 
-            txtCntPort.BorderStyle = BorderStyle.FixedSingle;
-            txtCntPort.Name = "txtCntPort";
-            txtCntPort.Size = new Size(39, 27);
-            txtCntPort.Text = "100";
-            txtCntPort.TextBoxTextAlign = HorizontalAlignment.Center;
             // 
             // btnConnect
             // 
@@ -126,6 +105,7 @@
             btnConnect.Name = "btnConnect";
             btnConnect.Size = new Size(67, 24);
             btnConnect.Text = "Connect";
+            btnConnect.Click += btnConnect_Click;
             // 
             // btnClear
             // 
@@ -134,6 +114,7 @@
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(47, 24);
             btnClear.Text = "Clear";
+            btnClear.Click += btnClear_Click;
             // 
             // toolStripSplitButton2
             // 
@@ -155,6 +136,7 @@
             btnSend.Name = "btnSend";
             btnSend.Size = new Size(174, 26);
             btnSend.Text = "Unsafe Send";
+            btnSend.Click += btnSend_Click;
             // 
             // toolStripSeparator2
             // 
@@ -256,7 +238,7 @@
             progressOverall.Size = new Size(133, 22);
             progressOverall.Style = ProgressBarStyle.Continuous;
             // 
-            // Server
+            // ServerSendFileForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -267,8 +249,9 @@
             FormBorderStyle = FormBorderStyle.Fixed3D;
             Margin = new Padding(4, 5, 4, 5);
             MaximizeBox = false;
-            Name = "Server";
+            Name = "ServerSendFileForm";
             Text = "Server";
+            Load += ServerSendFileForm_Load;
             toolStrip1.ResumeLayout(false);
             toolStrip1.PerformLayout();
             menuTransfers.ResumeLayout(false);
@@ -285,9 +268,6 @@
         private ToolStripMenuItem btnStartServer;
         private ToolStripMenuItem btnStopServer;
         private ToolStripSeparator toolStripSeparator1;
-        private ToolStripLabel toolStripLabel1;
-        private ToolStripTextBox txtCntHost;
-        private ToolStripTextBox txtCntPort;
         private ToolStripButton btnConnect;
         private ToolStripSeparator toolStripSeparator2;
         private ListView lstTransfers;
