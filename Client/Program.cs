@@ -2,6 +2,7 @@ namespace Client
 {
     internal static class Program
     {
+        public static Random random = new Random();
         /// <summary>
         ///  The main entry point for the application.
         /// </summary>

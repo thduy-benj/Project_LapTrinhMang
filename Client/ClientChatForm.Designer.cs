@@ -30,15 +30,14 @@
         {
             btnSendFile = new Button();
             label1 = new Label();
-            textBox1 = new TextBox();
+            tbHost = new TextBox();
             label2 = new Label();
-            textBox2 = new TextBox();
+            tbPort = new TextBox();
             btnConnect = new Button();
             SuspendLayout();
             // 
             // btnSendFile
             // 
-            btnSendFile.Enabled = false;
             btnSendFile.Location = new Point(12, 120);
             btnSendFile.Name = "btnSendFile";
             btnSendFile.Size = new Size(94, 29);
@@ -56,13 +55,13 @@
             label1.TabIndex = 1;
             label1.Text = "Host";
             // 
-            // textBox1
+            // tbHost
             // 
-            textBox1.Location = new Point(58, 12);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(125, 27);
-            textBox1.TabIndex = 2;
-            textBox1.Text = "127.0.0.1";
+            tbHost.Location = new Point(58, 12);
+            tbHost.Name = "tbHost";
+            tbHost.Size = new Size(125, 27);
+            tbHost.TabIndex = 2;
+            tbHost.Text = "127.0.0.1";
             // 
             // label2
             // 
@@ -73,13 +72,13 @@
             label2.TabIndex = 3;
             label2.Text = "Port";
             // 
-            // textBox2
+            // tbPort
             // 
-            textBox2.Location = new Point(58, 52);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(125, 27);
-            textBox2.TabIndex = 4;
-            textBox2.Text = "100";
+            tbPort.Location = new Point(58, 52);
+            tbPort.Name = "tbPort";
+            tbPort.Size = new Size(125, 27);
+            tbPort.TabIndex = 4;
+            tbPort.Text = "2121";
             // 
             // btnConnect
             // 
@@ -97,9 +96,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(btnConnect);
-            Controls.Add(textBox2);
+            Controls.Add(tbPort);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(tbHost);
             Controls.Add(label1);
             Controls.Add(btnSendFile);
             Name = "ClientChatForm";
@@ -112,9 +111,9 @@
 
         private Button btnSendFile;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox tbHost;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox tbPort;
         private Button btnConnect;
     }
 }
