@@ -14,7 +14,6 @@ namespace DoAnLapTrinhMang
         }
 
         TcpListener listener = new TcpListener(IPAddress.Parse("127.0.0.1"), 8888);
-        private List<Thread> threads = new List<Thread>();
         private List<Chat_User> users = new List<Chat_User>();
         private Dictionary<int, TcpClient> connectedUsers = new Dictionary<int, TcpClient>();
 
@@ -33,7 +32,6 @@ namespace DoAnLapTrinhMang
 
                     Thread clientThread = new Thread(() => ReceiveClientMessage(client));
                     clientThread.Start();
-                    threads.Add(clientThread);
                 }
             }
             catch (Exception ex)

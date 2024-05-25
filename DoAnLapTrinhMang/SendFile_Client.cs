@@ -319,11 +319,5 @@
 
             progressOverall.Value = 0;
         }
-
-        private void SendFile_Client_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            deregisterEvents();
-            base.OnFormClosing(e);
-        }
     }
 }

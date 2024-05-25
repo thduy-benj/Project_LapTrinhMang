@@ -49,13 +49,12 @@
             }
         }
 
-        // Mỗi buffer sẽ có 8KB = 8192 trong đó 
         // * 1 Byte = Header
         // * 4 Bytes = ID
         // * 8 Bytes = Index
         // * 4 Bytes = read
-        // => 8175 Bytes = file_buffer
-        private const int FILE_BUFFER_SIZE = 8175;
+        // ==> file buffer = buffer - 17
+        private const int FILE_BUFFER_SIZE = 131072-17;
         private static byte[] file_buffer = new byte[FILE_BUFFER_SIZE];
         private ManualResetEvent pauseEvent;
         public int ID;

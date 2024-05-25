@@ -305,7 +305,6 @@ partial class SendFile_Client
         MaximizeBox = false;
         Name = "SendFile_Client";
         Text = "File Transfer";
-        FormClosing += SendFile_Client_FormClosing;
         toolStrip1.ResumeLayout(false);
         toolStrip1.PerformLayout();
         menuTransfers.ResumeLayout(false);

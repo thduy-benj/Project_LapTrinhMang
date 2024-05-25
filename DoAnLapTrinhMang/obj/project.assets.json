@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Benjamin_stuff\\C#\\DoAnLapTrinhMang\\DoAnLapTrinhMang\\DoAnLapTrinhMang.csproj",
+      "projectUniqueName": "D:\\Benjamin_stuff\\C#\\Project_LapTrinhMang\\DoAnLapTrinhMang\\DoAnLapTrinhMang.csproj",
       "projectName": "DoAnLapTrinhMang",
-      "projectPath": "D:\\Benjamin_stuff\\C#\\DoAnLapTrinhMang\\DoAnLapTrinhMang\\DoAnLapTrinhMang.csproj",
+      "projectPath": "D:\\Benjamin_stuff\\C#\\Project_LapTrinhMang\\DoAnLapTrinhMang\\DoAnLapTrinhMang.csproj",
       "packagesPath": "C:\\Users\\THANH DUY\\.nuget\\packages\\",
-      "outputPath": "D:\\Benjamin_stuff\\C#\\DoAnLapTrinhMang\\DoAnLapTrinhMang\\obj\\",
+      "outputPath": "D:\\Benjamin_stuff\\C#\\Project_LapTrinhMang\\DoAnLapTrinhMang\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\THANH DUY\\AppData\\Roaming\\NuGet\\NuGet.Config",
