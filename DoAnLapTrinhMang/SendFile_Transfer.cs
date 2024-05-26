@@ -9,7 +9,7 @@ namespace DoAnLapTrinhMang
     public class SendFile_Transfer
     {
         private Socket baseSocket;
-        private byte[] buffer_size = new byte[131072];
+        private byte[] buffer_size = new byte[65536];
         private ConnectCallback _connectCallback;
         private Dictionary<int, SendFile_Queue> transfers = new Dictionary<int, SendFile_Queue>();
 

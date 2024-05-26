@@ -15,7 +15,7 @@ namespace DoAnLapTrinhMang
 
         private TcpClient tcpClient = new TcpClient();
         private NetworkStream networkStream;
-        private Chat_User sender;
+        private Chat_User Sender;
         private List<Chat_User> connectedUsers = new List<Chat_User>();
 
         private async Task SendAsync(byte[] data)
@@ -40,7 +40,7 @@ namespace DoAnLapTrinhMang
             try
             {
                 byte[] messageBytes = Encoding.UTF8.GetBytes(textMessage);
-                Chat_Message message = new Chat_Message("TEXT", $"{sender.ID}>{receiver.ID}", messageBytes);
+                Chat_Message message = new Chat_Message("TEXT", $"{Sender.ID}>{receiver.ID}", messageBytes);
                 string jsonMessage = JsonSerializer.Serialize(message);
                 await SendAsync(Encoding.UTF8.GetBytes(jsonMessage));
             }
@@ -54,9 +54,10 @@ namespace DoAnLapTrinhMang
         public async Task SendFileAsync(string filePath, Chat_User receiver)
         {
             byte[] fileBytes = File.ReadAllBytes(filePath);
-            Chat_Message message = new Chat_Message("FILE", $"{sender.ID}>{receiver.ID}", fileBytes, Path.GetFileName(filePath));
+            Chat_Message message = new Chat_Message("FILE", $"{Sender.ID}>{receiver.ID}", fileBytes, Path.GetFileName(filePath));
             string jsonMessage = JsonSerializer.Serialize(message);
             await SendAsync(Encoding.UTF8.GetBytes(jsonMessage));
+            await SendMessageAsync(filePath, receiver);
         }
 
         private async void ReceiveMessagesAsync()
@@ -80,7 +81,7 @@ namespace DoAnLapTrinhMang
                         List<Chat_User> newUser = JsonSerializer.Deserialize<List<Chat_User>>(message.data);
                         foreach (Chat_User user in newUser)
                         {
-                            if (user.ID == sender.ID) continue;
+                            if (user.ID == Sender.ID) continue;
                             connectedUsers.Add(user);
                             cbUsers.Items.Add(user.Name);
                         }
@@ -150,8 +151,8 @@ namespace DoAnLapTrinhMang
                 btnSend.Enabled = true;
                 btnConnect.Enabled = false;
 
-                this.sender = new Chat_User(new Random().Next(), tbUserName.Text);
-                await SendUserInfoAsync(this.sender);
+                this.Sender = new Chat_User(new Random().Next(), tbUserName.Text);
+                await SendUserInfoAsync(this.Sender);
 
                 Thread receiveThread = new Thread(ReceiveMessagesAsync);
                 receiveThread.Start();
@@ -223,6 +224,7 @@ namespace DoAnLapTrinhMang
                         if (user.Name.Equals(cbUsers.Text))
                         {
                             await SendFileAsync(filePath, user);
+                            chatMessages.Items.Add($"{Sender.Name}: {filePath}");
                             break;
                         }
                     }
@@ -236,7 +238,7 @@ namespace DoAnLapTrinhMang
 
         private void Chat_Client_FormClosing(object sender, FormClosingEventArgs e)
         {
-            tcpClient.Close();
+            if (tcpClient.Connected) tcpClient.Close();
             networkStream.Close();
         }
     }

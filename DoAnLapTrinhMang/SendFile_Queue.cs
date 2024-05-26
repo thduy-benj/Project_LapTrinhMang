@@ -54,7 +54,7 @@
         // * 8 Bytes = Index
         // * 4 Bytes = read
         // ==> file buffer = buffer - 17
-        private const int FILE_BUFFER_SIZE = 131072-17;
+        private const int FILE_BUFFER_SIZE = 65536 - 17;
         private static byte[] file_buffer = new byte[FILE_BUFFER_SIZE];
         private ManualResetEvent pauseEvent;
         public int ID;
