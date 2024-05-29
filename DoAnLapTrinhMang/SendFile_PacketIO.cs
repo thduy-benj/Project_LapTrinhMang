@@ -4,8 +4,7 @@ public class PacketWriter : BinaryWriter
     private MemoryStream ms;
     private BinaryFormatter bf;
 
-    public PacketWriter()
-        : base()
+    public PacketWriter() : base()
     {
         ms = new MemoryStream();
         bf = new BinaryFormatter();
@@ -25,8 +24,7 @@ public class PacketWriter : BinaryWriter
 public class PacketReader : BinaryReader
 {
     private BinaryFormatter bf;
-    public PacketReader(byte[] data)
-        : base(new MemoryStream(data))
+    public PacketReader(byte[] data) : base(new MemoryStream(data))
     {
         bf = new BinaryFormatter();
     }

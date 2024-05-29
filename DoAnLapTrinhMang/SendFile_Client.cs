@@ -2,16 +2,17 @@
 {
     public partial class SendFile_Client : Form
     {
-        public SendFile_Client()
+        public SendFile_Client(int client_id)
         {
             InitializeComponent();
+            this.Text = $"Client{client_id}";
             listener = new SendFile_Listener();
             listener.Accepted += listener_Accepted;
             tmrOverallProg = new System.Windows.Forms.Timer();
-            tmrOverallProg.Interval = 1000;
+            tmrOverallProg.Interval = 100;
             tmrOverallProg.Tick += tmrOverallProg_Tick;
 
-            outputFolder = "Transfers";
+            outputFolder = $"Transfers{client_id}";
 
             if (!Directory.Exists(outputFolder))
             {
@@ -210,9 +211,10 @@
 
         private void btnStartServer_Click(object sender, EventArgs e)
         {
-            if (serverRunning)
-                return;
+            if (serverRunning) return;
+
             serverRunning = true;
+
             try
             {
                 listener.Start(int.Parse(txtServerPort.Text.Trim()));

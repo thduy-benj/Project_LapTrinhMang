@@ -166,8 +166,6 @@
 
                         queue.Client.callProgressChanged(queue);
                     }
-
-                    Thread.Sleep(1);
                 }
             }
             queue.Close();

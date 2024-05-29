@@ -121,7 +121,7 @@ namespace DoAnLapTrinhMang
             }
 
             PacketWriter pw = new PacketWriter();
-            pw.Write((byte)SendFile_Headers.Stop);
+            pw.Write((byte)SendFile_Headers.Cancel);
             pw.Write(queue.ID);
             Send(pw.GetBytes());
             queue.Close();
@@ -226,7 +226,7 @@ namespace DoAnLapTrinhMang
                         }
                     }
                     break;
-                case SendFile_Headers.Stop:
+                case SendFile_Headers.Cancel:
                     {
                         int id = pr.ReadInt32();
 

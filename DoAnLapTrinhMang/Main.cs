@@ -6,10 +6,10 @@ namespace DoAnLapTrinhMang
         {
             InitializeComponent();
         }
-
+        int sendfile_client_id = 1;
         private void button2_Click(object sender, EventArgs e)
         {
-            SendFile_Client sendFile_Client = new SendFile_Client();
+            SendFile_Client sendFile_Client = new SendFile_Client(sendfile_client_id++);
             sendFile_Client.Show();
         }
 

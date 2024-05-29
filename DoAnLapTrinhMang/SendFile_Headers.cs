@@ -4,7 +4,7 @@
     {
         Queue,
         Start,
-        Stop,
+        Cancel,
         Pause,
         Chunk
     }
